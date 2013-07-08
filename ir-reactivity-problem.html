@@ -3,12 +3,15 @@
 </head>
 
 <template name="layout">
-  {{{yield 'test'}}}
-  {{{yield}}}
+  nav: {{nav}} <br/>
+  aside: {{{yield 'test'}}} <br/>
+  content: {{{yield}}}
 </template>
 
 <template name="hello">
   <h1>Hello World!</h1>
-  {{#contentFor 'test'}}something{{/contentFor}}
-  {{greeting}}
+  {{#contentFor 'test'}}
+    {{aside}}
+  {{/contentFor}}
+  {{content}}
 </template>
