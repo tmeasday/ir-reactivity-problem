@@ -1,0 +1,14 @@
+<head>
+  <title>ir-reactivity-problem</title>
+</head>
+
+<template name="layout">
+  {{{yield 'test'}}}
+  {{{yield}}}
+</template>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{#contentFor 'test'}}something{{/contentFor}}
+  {{greeting}}
+</template>
